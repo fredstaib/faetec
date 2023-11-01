@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pop-up com Botões e GIF</title>
+  <script>
+    function mostrarPopup1() {
+      var popup1 = document.getElementById("popup1");
+      popup1.style.display = "block";
+    }
+
+    function mostrarPopup2() {
+      var popup2 = document.getElementById("popup2");
+      popup2.style.display = "block";
+    }
+
+    function mostrarPopup3() {
+      var popup3 = document.getElementById("popup3");
+      popup3.style.display = "block";
+    }
+  </script>
+  <style>
+    /* Estilos para os pop-ups */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+      text-align: center;
+      padding-top: 200px;
+    }
+
+    .popup-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body onload="mostrarPopup1()">
+  <div id="popup1" class="popup">
+    <div class="popup-content">
+      <p>Você vai jogar?</p>
+      <button onclick="mostrarPopup2()">OK</button>
+    </div>
+  </div>
+
+  <div id="popup2" class="popup">
+    <div class="popup-content">
+      <p>Poxa vida! Já pedi pra não jogar!</p>
+      <button onclick="mostrarPopup3()">Sai fora, Fred!</button>
+    </div>
+  </div>
+
+  <div id="popup3" class="popup">
+    <div class="popup-content">
+      <p>Você não disse a palavra mágica!</p>
+      <img src="jurassic.gif" alt="GIF">
+    </div>
+  </div>
+</body>
+</html>
